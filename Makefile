@@ -1,7 +1,3 @@
-# Makefile Template
-# Add your targets below with comments in the format: ## description
-# Running 'make' will automatically show all targets and their descriptions
-
 # Default target - shows help
 .PHONY: help
 help: ## Show this help message
@@ -15,24 +11,14 @@ help: ## Show this help message
 .DEFAULT_GOAL := help
 
 # Example targets - customize these for your project
-
-.PHONY: all build test
-
-all: ## Build and test everything
-	@echo "Building and testing all components..."
-	@$(MAKE) build
-	@$(MAKE) test
-
+.PHONY: build
 build: ## Build the project
 	@echo "Building project..."
 	@# Add your build commands here
 	@echo "Build complete!"
 
+.PHONY: test
 test: ## Run all tests
 	@echo "Running tests..."
 	@# Add your test commands here
 	@echo "All tests passed!"
-
-# Add more targets below following the same pattern:
-# target-name: ## Description of what this target does
-# @commands go here
